@@ -1,0 +1,238 @@
+/* --- GLOBAL --- */
+body {
+font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.status {
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+    .status.Proses { background-color: #ffe5e5; color: #c0392b; }
+    .status.Selesai { background-color: #e6f4ea; color: #27ae60; }
+
+.icon-btn {
+  width: 42px;
+  height: 42px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: 0.2s ease;
+}
+.icon-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+/* --- HEADER --- */
+h4 {
+  font-weight: 600;
+}
+
+.section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* --- INFORMASI --- */
+.info-label {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.info-value {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* --- GAMBAR PROFIL --- */
+
+.rounded-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #eaeaea;
+}
+
+.btn-outline-secondary {
+  border-radius: 8px;
+}
+
+.upload-toggle {
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .upload-toggle:hover {
+    background-color: #f8f9fa;
+  }
+  .upload-section {
+    display: none;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 12px;
+    border: 1px dashed #ccc;
+    margin-top: 1rem;
+  }
+
+/* --- CONTAINER PEMESANAN --- */
+.customer-container, .card,
+.document-container,
+.property-container {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  margin-bottom: 1.5rem;
+}
+
+.customer-container .row, .document-container .row, .property-container .row {
+  margin-bottom: 1rem;
+}
+
+.profile-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-info {
+  flex-grow: 1;
+}
+
+.scrollable-properties {
+  max-height: 615px;
+  overflow-y: auto;
+}
+
+@media (max-width: 576px) {
+  .profile-row {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.offset-mobile-fix {
+  margin-left: 0 !important;
+}
+}
+
+/* --- CONTAINER DOKUMEN --- */
+.card-document .list-group-item {
+  background-color: transparent;
+  border: none;
+  font-size: 0.95rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* --- CONTAINER PROPERTI --- */
+.card-property {
+  background-color: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.property-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.property-box {
+  margin-bottom: 1rem;
+  
+}
+.text-break {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* --- STATUS PEMESANAN DINAMIS --- */
+.badge.bg-success {
+  background-color: #d4fcd4 !important;
+  color: #228B22 !important;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .section-title {
+    margin-top: 1.5rem;
+  }
+
+  .property-img {
+    width: 100% !important;
+    height: auto;
+    border-radius: 10px !important;
+  }
+  
+  .rounded-image {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.notes-wrapper {
+  scroll-snap-type: x mandatory;
+  padding-bottom: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+}
+.note-card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.note-card .bi {
+  font-size: 1rem;
+}
+
+.note-card a {
+  color: inherit;
+}
+.note-card a:hover {
+  color: #0d6efd;
+}

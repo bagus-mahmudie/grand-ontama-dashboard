@@ -1,0 +1,168 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+}
+
+/* FULLSCREEN CONTAINER */
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+/* TABLE STYLE */
+.table-pemesanan {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+
+.table-pemesanan th,
+.table-pemesanan td {
+  padding: 1rem;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: left;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.table-pemesanan thead {
+  background-color: #fafafa;
+  font-weight: 600;
+  color: #555;
+}
+
+.table-pemesanan tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.profile-img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.badge-status {
+  font-size: 0.8rem;
+  padding: 0.3em 0.75em;
+  border-radius: 12px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.bg-tersedia {
+  background-color: #e9fce9 !important;
+  color: #1a7f1a !important;
+}
+.bg-booking {
+  background-color: #fff3cd !important;
+  color: #664d03 !important;
+}
+.bg-terjual {
+  background-color: #f8d7da !important;
+  color: #842029 !important;
+}
+.bg-secondary {
+  background-color: #e2e3e5 !important;
+  color: #41464b !important;
+}
+.bg-status-aktif {
+  background-color: #d1f7d6;
+  color: #1a7f1a;
+}
+
+.bg-status-nonaktif {
+  background-color: #fce3e3;
+  color: #c0392b;
+}
+
+.bg-tipe-internal {
+  background-color: #d6eaff;
+  color: #0066cc;
+}
+
+.bg-tipe-eksternal {
+  background-color: #fdeacc;
+  color: #b35b00;
+}
+
+
+/* BUTTON ACTION */
+.btn-action {
+  background: none;
+  border: none;
+  padding: 0.3rem;
+  color: #555;
+  cursor: pointer;
+}
+.btn-action:hover {
+  color: #000;
+}
+
+/* TOOLBAR */
+.table-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.search-input {
+  max-width: 260px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+}
+
+.btn-tambah {
+  background-color: #4d9ef6;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+.btn-tambah:hover {
+  background-color: #3386de;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .table-pemesanan th,
+  .table-pemesanan td {
+    padding: 0.75rem;
+  }
+
+  .profile-img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+
+  .table-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,50 @@
+.nav-link {
+  color: #707070;
+  font-weight: 500;
+  padding: 10px 30px;
+  border-radius: 50px;
+}
+
+.nav-link:hover {
+  background-color: #609FFC;  /* Warna latar belakang saat hover */
+  color: white;                /* Warna teks saat hover */
+  border-radius: 50px; 
+}
+
+.nav-link.active {
+  background-color: #609FFC;  /* Warna latar belakang item aktif */
+  color: white;                /* Warna teks item aktif */
+  border-radius: 50px;  
+}
+.nav-link.active a {
+  color: #FFFFFF;
+}
+.text-primary{
+  color: #FFFFFF;
+}
+
+@media (max-width: 992px) {
+.offcanvas-body .nav-link {
+  font-weight: 500;
+  padding: 10px 0;
+}
+.offcanvas.offcanvas-end.offcanvas-70 {
+  width: 70vw; /* 70% dari lebar viewport */
+}
+.offcanvas-body .dropdown-menu {
+  position: absolute;
+  right: 10px;
+  bottom: 60px;
+  z-index: 1051;
+}
+/* Style nav-link aktif pada sidebar offcanvas */
+.offcanvas-body .nav-link:hover, .nav-link.active {
+  background-color: transparent !important;
+  color: #0d6efd !important; /* Bootstrap primary color */
+  font-weight: 600;
+}
+.offcanvas .dropdown-menu {
+  min-width: 100%;
+}
+
+}

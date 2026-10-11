@@ -1,0 +1,36 @@
+# ===========================
+# Nonaktifkan direktori listing
+# ===========================
+Options -Indexes
+
+# ===========================
+# Hapus ekstensi .php dari URL
+# ===========================
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteCond %{THE_REQUEST} \s/([^?]*?)\.php[?\s] [NC]
+  RewriteRule ^ %1 [L,R=301]
+
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}\.php -f
+  RewriteRule ^(.*?)/?$ $1.php [L,QSA]
+</IfModule>
+
+
+# ===========================
+# Blokir file sensitif
+# ===========================
+<FilesMatch "^(db|auth|navbar)\.php$">
+  Require all denied
+</FilesMatch>
+
+# ===========================
+# Blokir eksekusi file PHP di folder assets dan form
+# ===========================
+<FilesMatch "^assets/.*\.php$">
+  Require all denied
+</FilesMatch>
+
+DirectoryIndex dashboard.php
