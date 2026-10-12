@@ -39,3 +39,6 @@
 /db.php
 /assets/docs/
 /assets/docs_agen/
+
+# Reviewed import schema; private SQL exports remain ignored
+!/database/db_go.sql

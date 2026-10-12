@@ -20,7 +20,22 @@ Gunakan server Apache/PHP, misalnya XAMPP. Tempatkan salinan proyek pada documen
 
 ## Database
 
-Aplikasi membutuhkan MySQL. Dump database dan data operasional tidak disertakan; siapkan skema database yang sesuai sebelum menjalankan fitur dinamis. Repository ini belum menyediakan instalasi database otomatis.
+SQL siap impor tersedia di [`database/db_go.sql`](database/db_go.sql). File ini berasal dari dump proyek yang telah dibersihkan: struktur tabel, indeks, dan relasi dipertahankan; akun, hash password, data pribadi, serta data operasional asli tidak disertakan.
+
+1. Buat database kosong bernama `db_go` melalui phpMyAdmin.
+2. Pilih database tersebut, buka tab **Import**, lalu pilih `database/db_go.sql`. SQL ditujukan untuk database kosong dan tidak menghapus tabel yang sudah ada.
+3. Salin template konfigurasi sesuai tabel di bawah, lalu isi host, nama database `db_go`, username, dan password MySQL lokal Anda pada `db.php`.
+4. Dari folder proyek, jalankan `php database/create-admin.php` untuk membuat akun lokal dengan password pilihan Anda. Tidak ada akun atau password bawaan di repository.
+
+Alternatif impor melalui terminal MySQL, setelah database kosong dibuat:
+
+```sql
+USE db_go;
+SOURCE database/db_go.sql;
+```
+
+Jalankan perintah `SOURCE` dari folder proyek. Pada XAMPP Windows, PHP CLI tersedia di `C:\xampp\php\php.exe`.
+
 
 ## Konfigurasi privat
 
@@ -34,4 +49,4 @@ File konfigurasi lokal diabaikan oleh Git. Jangan memasukkan password, API key, 
 
 ## Catatan repository
 
-Dependensi terpasang, cache, file `.env`, database, dan unggahan pengguna tidak disertakan. Nama merek dan aset pihak ketiga tetap mengikuti hak pemiliknya. Tidak ada lisensi penggunaan ulang yang diberikan melalui repository ini.
+Dependensi terpasang, cache, file `.env`, data database operasional, dan unggahan pengguna tidak disertakan. Nama merek dan aset pihak ketiga tetap mengikuti hak pemiliknya. Tidak ada lisensi penggunaan ulang yang diberikan melalui repository ini.
