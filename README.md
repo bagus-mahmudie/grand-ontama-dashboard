@@ -1,52 +1,52 @@
 # Grand Ontama Dashboard
 
-Dashboard administrasi Grand Ontama untuk pengelolaan properti, pelanggan, agen, dan pemesanan.
+Grand Ontama administration dashboard for managing properties, customers, agents, and bookings.
 
-**Status:** Live · [Buka website](https://grandontama.com/dashboard/login)
+**Status:** Live · [Visit website](https://grandontama.com/dashboard/login)
 
-## Fitur
+## Features
 
-- Status ketersediaan dan penjualan properti
-- Data pelanggan, catatan, serta dokumen pendukung
-- Pengelolaan agen, pemesanan, dan hak akses admin
+- Property availability and sales status
+- Customer data, notes, and supporting documents
+- Agent, booking, and admin access management
 
-## Teknologi
+## Technology
 
 PHP, MySQL, HTML, CSS, JavaScript.
 
-## Menjalankan secara lokal
+## Running Locally
 
-Gunakan server Apache/PHP, misalnya XAMPP. Tempatkan salinan proyek pada document root dan buka `login.php` melalui localhost. Aturan `.htaccess`, jika tersedia, membutuhkan Apache dengan konfigurasi yang sesuai.
+Use an Apache/PHP server, such as XAMPP. Place a copy of the project in the document root and open `login.php` through localhost. Any `.htaccess` rules require an appropriately configured Apache server.
 
 ## Database
 
-SQL siap impor tersedia di [`database/db_go.sql`](database/db_go.sql). File ini berasal dari dump proyek yang telah dibersihkan: struktur tabel, indeks, dan relasi dipertahankan; akun, hash password, data pribadi, serta data operasional asli tidak disertakan.
+Ready-to-import SQL is available at [`database/db_go.sql`](database/db_go.sql). This file comes from a sanitized project dump: table structures, indexes, and relationships are preserved; accounts, password hashes, personal data, and original operational data are excluded.
 
-1. Buat database kosong bernama `db_go` melalui phpMyAdmin.
-2. Pilih database tersebut, buka tab **Import**, lalu pilih `database/db_go.sql`. SQL ditujukan untuk database kosong dan tidak menghapus tabel yang sudah ada.
-3. Salin template konfigurasi sesuai tabel di bawah, lalu isi host, nama database `db_go`, username, dan password MySQL lokal Anda pada `db.php`.
-4. Dari folder proyek, jalankan `php database/create-admin.php` untuk membuat akun lokal dengan password pilihan Anda. Tidak ada akun atau password bawaan di repository.
+1. Create an empty database named `db_go` using phpMyAdmin.
+2. Select the database, open the **Import** tab, and choose `database/db_go.sql`. The SQL is intended for an empty database and does not delete existing tables.
+3. Copy the configuration template listed in the table below, then enter your local MySQL host, database name `db_go`, username, and password in `db.php`.
+4. From the project directory, run `php database/create-admin.php` to create a local account with a password of your choice. The repository does not include default accounts or passwords.
 
-Alternatif impor melalui terminal MySQL, setelah database kosong dibuat:
+Alternatively, import through the MySQL terminal after creating an empty database:
 
 ```sql
 USE db_go;
 SOURCE database/db_go.sql;
 ```
 
-Jalankan perintah `SOURCE` dari folder proyek. Pada XAMPP Windows, PHP CLI tersedia di `C:\xampp\php\php.exe`.
+Run the `SOURCE` command from the project directory. On XAMPP for Windows, the PHP CLI is available at `C:\xampp\php\php.exe`.
 
 
-## Konfigurasi privat
+## Private Configuration
 
-Salin template berikut ke nama file lokalnya, lalu isi nilai untuk lingkungan Anda:
+Copy the following templates to their corresponding local filenames, then enter the values for your environment:
 
-| Template | File lokal |
+| Template | Local File |
 | --- | --- |
 | `db.example.php` | `db.php` |
 
-File konfigurasi lokal diabaikan oleh Git. Jangan memasukkan password, API key, atau data akun ke source code.
+Local configuration files are ignored by Git. Do not include passwords, API keys, or account data in the source code.
 
-## Catatan repository
+## Repository Notes
 
-Dependensi terpasang, cache, file `.env`, data database operasional, dan unggahan pengguna tidak disertakan. Nama merek dan aset pihak ketiga tetap mengikuti hak pemiliknya. Tidak ada lisensi penggunaan ulang yang diberikan melalui repository ini.
+Installed dependencies, caches, `.env` files, operational database data, and user uploads are not included. Brand names and third-party assets remain subject to their respective owners' rights. This repository does not grant a license for reuse.
