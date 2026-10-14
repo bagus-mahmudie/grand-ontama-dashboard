@@ -4,6 +4,10 @@ Grand Ontama administration dashboard for managing properties, customers, agents
 
 **Status:** Live · [Visit website](https://grandontama.com/dashboard/login)
 
+## Preview
+
+[![Grand Ontama Dashboard — application preview](docs/screenshots/project-preview.png)](docs/screenshots/project-preview.png)
+
 ## Features
 
 - Property availability and sales status
